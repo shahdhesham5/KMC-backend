@@ -127,12 +127,12 @@ USE_L10N = True
 
 USE_TZ = True
 
-ORDER_EXPIRES_AFTER_IN_HOURS = 2
+ORDER_EXPIRES_AFTER_IN_HOURS = 5
 
-# Media Files 
-MEDIA_URL = "media/"   
+# Media Files
+MEDIA_URL = "media/"
 # MEDIA_ROOT = os.path.join(BASE_DIR, "kmc_back/media")
-MEDIA_ROOT = os.path.join(BASE_DIR, "media")  
+MEDIA_ROOT = os.path.join(BASE_DIR, "media")
 
 # Static Files (CSS, JavaScript, Images)
 STATIC_URL = "/static/"

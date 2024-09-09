@@ -19,16 +19,16 @@ KASHIER_PAYMENT_URL = "https://checkout.kashier.io/"
 KASHIER_REFUND_URL = "https://test-api.kashier.io/"
 CURRENCY = "EGP"
 # live config
-# MARCHANT_ID = "MID-8830-987"
-# KASHIER_API_KEY = "bafca527-d7a6-4019-94ea-36e0417b8016"
-# KASHIER_SECRET_KEY = "b537190657e9f8e8faae7c86c3dac233$84f1d59cd94db5be84790030d76854a57aa1b24fdb6e0a2ff855072e44b6e03086ab83db055f2b437421266f7dd67b69"
-# KASHIER_REDIRECT_URL = "https://www.kandilmedical.com/api/order/payment-callback/"
+MARCHANT_ID = "MID-8830-987"
+KASHIER_API_KEY = "bafca527-d7a6-4019-94ea-36e0417b8016"
+KASHIER_SECRET_KEY = "b537190657e9f8e8faae7c86c3dac233$84f1d59cd94db5be84790030d76854a57aa1b24fdb6e0a2ff855072e44b6e03086ab83db055f2b437421266f7dd67b69"
+KASHIER_REDIRECT_URL = "https://www.kandilmedical.com/api/order/payment-callback/"
 
 # testing config
-MARCHANT_ID ="MID-27572-218"
-KASHIER_SECRET_KEY ="abac191b174300b905452d4144ac8c66$2445d918f5f6a1fbc3b76dfbe3946e5c1562c88113186536b7fbddd06c133c0b581ab3d916824fae057ee4e16058b871"
-KASHIER_API_KEY = "105a8d17-340b-4253-833d-d73ca0aef9bf"
-KASHIER_REDIRECT_URL = "http://127.0.0.1:2271/api/order/payment-callback/"
+# MARCHANT_ID ="MID-27572-218"
+# KASHIER_SECRET_KEY ="abac191b174300b905452d4144ac8c66$2445d918f5f6a1fbc3b76dfbe3946e5c1562c88113186536b7fbddd06c133c0b581ab3d916824fae057ee4e16058b871"
+# KASHIER_API_KEY = "105a8d17-340b-4253-833d-d73ca0aef9bf"
+# KASHIER_REDIRECT_URL = "http://127.0.0.1:2271/api/order/payment-callback/"
 
 
 
@@ -61,8 +61,8 @@ def kashier_hash(order):
 
 def kashier_generate_iframe(order):
     hash = kashier_hash(order)
-    # mode = "live"
-    mode = "test"
+    mode = "live"
+    # mode = "test"
 
     type_ = "external"
     language = "en"

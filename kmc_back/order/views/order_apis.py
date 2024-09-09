@@ -46,15 +46,15 @@ class CreateOrderAPI(CreateAPIView, ListAPIView):
                 order.shipping_status = "Preparing for Delivery"
                 order.save()
                 
-                # async_send_email.delay(
-                #     subject="New order",
-                #     message=f"New order by {order.user.name}, Phone {order.user.phone}, Awb: {order.awb}",
-                #     receivers=[
-                #         "mazen@kandilmedical.com",
-                #         "ahmed@kandilmedical.com",
-                #         "Karim@kandilmedical.com",
-                #     ],
-                # )
+                async_send_email.delay(
+                    subject="New order",
+                    message=f"New order by {order.user.name}, Phone {order.user.phone}, Awb: {order.awb}",
+                    receivers=[
+                        "mazen@kandilmedical.com",
+                        "ahmed@kandilmedical.com",
+                        "Karim@kandilmedical.com",
+                    ],
+                )
     
                 async_send_order_email.delay(order.user.id, order.id)
    
@@ -115,8 +115,8 @@ class PayMobCallBack(APIView):
             )
         )
         return redirect(
-            # f"https://www.kandilmedical.com/account/orders?is_success={call_back}"
-            f"http://localhost:4200/account/orders/?is_success={call_back}"
+            f"https://www.kandilmedical.com/account/orders?is_success={call_back}"
+            # f"http://localhost:4200/account/orders/?is_success={call_back}"
         )
 
 
